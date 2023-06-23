@@ -1,4 +1,4 @@
-﻿namespace CleanArch.Application.Interfaces
+﻿namespace CleanArch.Application
 {
     public class Class1
     {
