@@ -3,10 +3,11 @@ using System.ComponentModel.DataAnnotations;
 
 namespace CleanArchDemo.Domain.Entities
 {
-    public class Coordination:GeneralData
+    public class Academic:GeneralData
     {
         [Required(ErrorMessage = "O campo é obrigatório")]
-        public Academic Teacher { get; set; }
-
+        public string? AcademicLevel { get; set; }
+        [Required(ErrorMessage = "O campo é obrigatório")]
+        public Matter Subject { get; set; }
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace CleanArchDemo.Domain.Entities
+﻿using CleanArchDemo.Domain.Common;
+
+namespace CleanArchDemo.Domain.Entities
 {
-    public class Course
+    public class Course:GeneralData
     {
     }
 }
