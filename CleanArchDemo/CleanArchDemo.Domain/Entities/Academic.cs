@@ -8,6 +8,6 @@ namespace CleanArchDemo.Domain.Entities
         [Required(ErrorMessage = "O campo é obrigatório")]
         public string? AcademicLevel { get; set; }
         [Required(ErrorMessage = "O campo é obrigatório")]
-        public Matter Subject { get; set; }
+        public Subject Subject { get; set; }
     }
 }

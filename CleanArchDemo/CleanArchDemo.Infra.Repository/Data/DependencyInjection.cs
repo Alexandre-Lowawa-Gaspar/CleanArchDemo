@@ -18,13 +18,13 @@ namespace CleanArchDemo.Infra.Repository.Data
         {
             services.AddDbContext<ApplicationDbContext>(options =>
             options
-            .UseMySql(configuration.GetConnectionString("DefaultConnection"),ServerVersion.Parse("10.4.21-MariaDB")));
-            
-            services.AddScoped(sp =>
+            .UseMySql(configuration.GetConnectionString("CleanArchDemoConnectionString"),ServerVersion.Parse("10.4.21-MariaDB"),b=>b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)),ServiceLifetime.Transient);
+            services.AddScoped<IApplicationDbContext>(options => options.GetService<ApplicationDbContext>());
+          /*  services.AddScoped(sp =>
             sp.GetRequiredService<ApplicationDbContext>());
 
-            services.AddScoped(typeof(IRepositoryBase<>),typeof(RepositoryBase<>));   
-         
+            services.AddScoped(typeof(IRepositoryBase<>),typeof(RepositoryBase<>));  
+         */
         return services;
         }
     }

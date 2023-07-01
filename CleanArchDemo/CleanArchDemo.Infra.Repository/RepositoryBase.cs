@@ -1,5 +1,4 @@
 ﻿using CleanArchDemo.Domain.Interfaces;
-using CleanArchDemo.Infra.Repository.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

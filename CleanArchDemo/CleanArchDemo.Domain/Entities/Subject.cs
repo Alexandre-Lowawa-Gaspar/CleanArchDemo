@@ -2,7 +2,7 @@
 
 namespace CleanArchDemo.Domain.Entities
 {
-    public class Matter : GeneralData
+    public class Subject : GeneralData
     {
     }
 }
