@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 
-namespace CleanArchDemo.Infra.Repository.Data
+namespace CleanArch.Application.Interfaces
 {
     public interface IApplicationDbContext
     {

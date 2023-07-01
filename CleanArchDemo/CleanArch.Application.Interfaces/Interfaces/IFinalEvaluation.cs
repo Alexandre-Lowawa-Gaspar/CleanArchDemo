@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CleanArchDemo.Domain.Interfaces
+namespace CleanArch.Application.Interfaces
 {
     public interface IFinalEvaluation
     {

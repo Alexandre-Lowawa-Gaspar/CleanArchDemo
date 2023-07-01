@@ -1,4 +1,4 @@
-using CleanArchDemo.Infra.Repository.Data;
+using CleanArchDemo.Infra.IoC;
 using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);

@@ -1,5 +1,5 @@
-﻿using CleanArchDemo.Domain.Entities;
-using CleanArchDemo.Infra.Repository.Data;
+﻿using CleanArch.Application.Interfaces;
+using CleanArchDemo.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
