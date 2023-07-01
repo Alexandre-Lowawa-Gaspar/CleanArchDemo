@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanArchDemo.Infra.Repository - Cópia\CleanArchDemo.Infra.IoC.csproj" />
+    <ProjectReference Include="..\CleanArchDemo.Infra.IoC\CleanArchDemo.Infra.IoC.csproj" />
     <ProjectReference Include="..\CleanArchDemo.Infra.Repository\CleanArchDemo.Infra.Repository.csproj" />
   </ItemGroup>
 

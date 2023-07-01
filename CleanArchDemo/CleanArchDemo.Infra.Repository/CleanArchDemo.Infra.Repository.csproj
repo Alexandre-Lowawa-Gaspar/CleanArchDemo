@@ -34,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanArch.Application.Interfaces\CleanArch.Application.csproj" />
+    <ProjectReference Include="..\CleanArch.Application\CleanArchDemo.Application.csproj" />
     <ProjectReference Include="..\CleanArchDemo.Domain\CleanArchDemo.Domain.csproj" />
   </ItemGroup>
 
