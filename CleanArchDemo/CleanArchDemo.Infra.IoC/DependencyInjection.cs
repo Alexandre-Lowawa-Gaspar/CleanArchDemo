@@ -1,13 +1,7 @@
-﻿using CleanArch.Application.Interfaces;
-using CleanArchDemo.Infra.Repository;
+﻿using CleanArchDemo.Infra.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanArchDemo.Infra.IoC
 {
@@ -20,12 +14,8 @@ namespace CleanArchDemo.Infra.IoC
             services.AddDbContext<ApplicationDbContext>(options =>
             options
             .UseMySql(configuration.GetConnectionString("CleanArchDemoConnectionString"), ServerVersion.Parse("10.4.21-MariaDB"), b => b.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)), ServiceLifetime.Transient);
-            services.AddScoped<IApplicationDbContext>(options => options.GetService<ApplicationDbContext>());
-            /*  services.AddScoped(sp =>
-              sp.GetRequiredService<ApplicationDbContext>());
+            services.AddScoped<IApplicationDbContext>(op => op.GetService<ApplicationDbContext>());
 
-              services.AddScoped(typeof(IRepositoryBase<>),typeof(RepositoryBase<>));  
-           */
             return services;
         }
     }

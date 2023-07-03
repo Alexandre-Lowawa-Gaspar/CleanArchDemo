@@ -1,23 +1,19 @@
-﻿using CleanArch.Application.Interfaces;
+﻿using CleanArchDemo.Domain.Interfaces;
+using CleanArchDemo.Infra.Repository.Context;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CleanArchDemo.Infra.Repository
 {
-    public class RepositoryBase<TEntity> : IRepositoryBase<TEntity> 
-        where TEntity:class
+    public class RepositoryBase<TEntity> : IRepositoryBase<TEntity>
+        where TEntity : class
     {
         private readonly ApplicationDbContext _context;
 
         public RepositoryBase(ApplicationDbContext context)
         {
-            _context= context;
+            _context = context;
         }
+
         public void Add(TEntity entity)
         {
             _context.Set<TEntity>().Add(entity);
@@ -25,14 +21,13 @@ namespace CleanArchDemo.Infra.Repository
 
         public void DeleteAsync(TEntity entity)
         {
-             _context.Set<TEntity>().Remove(entity);
+            _context.Set<TEntity>().Remove(entity);
         }
 
         public async Task<IEnumerable<TEntity>> GetAllAsync()
         {
-            return await  _context.Set<TEntity>().ToListAsync();
+            return await _context.Set<TEntity>().ToListAsync();
         }
-
 
         public async Task<TEntity> GetByIdAsync(Guid id)
         {
@@ -51,7 +46,7 @@ namespace CleanArchDemo.Infra.Repository
 
         public void Update(TEntity entity)
         {
-             _context.Set<TEntity>().Update(entity);
+            _context.Set<TEntity>().Update(entity);
         }
     }
 }

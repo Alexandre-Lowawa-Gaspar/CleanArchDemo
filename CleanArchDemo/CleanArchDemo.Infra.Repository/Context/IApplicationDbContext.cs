@@ -1,8 +1,7 @@
 ﻿using CleanArchDemo.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 
-namespace CleanArch.Application.Interfaces
+namespace CleanArchDemo.Infra.Repository.Context
 {
     public interface IApplicationDbContext
     {

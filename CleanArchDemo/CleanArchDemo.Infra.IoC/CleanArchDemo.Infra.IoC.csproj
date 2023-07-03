@@ -29,7 +29,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanArch.Application\CleanArchDemo.Application.csproj" />
     <ProjectReference Include="..\CleanArchDemo.Domain\CleanArchDemo.Domain.csproj" />
     <ProjectReference Include="..\CleanArchDemo.Infra.Repository\CleanArchDemo.Infra.Repository.csproj" />
   </ItemGroup>

@@ -7,13 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.8" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
+   
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CleanArchDemo.Domain\CleanArchDemo.Domain.csproj" />
+    <ProjectReference Include="..\CleanArchDemo.Infra.Repository\CleanArchDemo.Infra.Repository.csproj" />
   </ItemGroup>
 
 </Project>

@@ -2,7 +2,7 @@
 
 namespace CleanArchDemo.Domain.Entities
 {
-    public class FinalEvaluation:GeneralData
+    public sealed class FinalEvaluation : GeneralData
     {
     }
 }

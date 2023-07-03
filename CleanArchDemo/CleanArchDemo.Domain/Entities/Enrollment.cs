@@ -2,7 +2,7 @@
 
 namespace CleanArchDemo.Domain.Entities
 {
-    public class Enrollment:GeneralData
+    public sealed class Enrollment : GeneralData
     {
     }
 }
